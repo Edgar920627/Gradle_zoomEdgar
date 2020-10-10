@@ -1,0 +1,33 @@
+{
+	"folders": {},
+	"connections": {
+		"mariaDB-175104ed02a-57153fcaa60f2d83": {
+			"provider": "mysql",
+			"driver": "mariaDB",
+			"name": "zoomedgar",
+			"save-password": true,
+			"show-system-objects": true,
+			"read-only": false,
+			"virtual-model-id": "mariaDB-1751049e443-7f5e83aa0c7ded79",
+			"configuration": {
+				"host": "zoomedgar.ce50sry5tc0l.ap-northeast-2.rds.amazonaws.com",
+				"port": "3306",
+				"database": "zoomedgar",
+				"url": "jdbc:mysql://zoomedgar.ce50sry5tc0l.ap-northeast-2.rds.amazonaws.com:3306/zoomedgar",
+				"home": "mysql_client",
+				"type": "dev",
+				"auth-model": "native"
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false
+		}
+	}
+}
