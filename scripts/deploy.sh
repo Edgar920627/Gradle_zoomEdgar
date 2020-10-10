@@ -30,7 +30,7 @@ echo "[5] start" >> $LOG
 sudo service tomcat8 start
 
 TOMCAT_PID=`ps -ef | grep tomcat | grep -v grep | grep -v vi | awk '{print $2}'`
-echo "[6] restart PID : $TOMCAT_PID" >> $LOG
+echo "[6] restart pid : $TOMCAT_PID" >> $LOG
 
 echo -e  >> $LOG
 
