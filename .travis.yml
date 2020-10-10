@@ -39,3 +39,18 @@ deploy:
     acl: private
     local_dir: deploy
     wait-until-deployed: true
+    
+  - provider: codedeploy
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+
+    bucket: zoomedgar-build-s3
+    key: zoomEdgar-webservice.zip
+
+    bundle_type: zip
+    application: zoomEdgar-webservice
+
+    deployment_group: zeusweb-webservice-group
+
+    region: ap-northeast-2
+    wait-until-deployed: true    
