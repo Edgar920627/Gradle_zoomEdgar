@@ -50,7 +50,7 @@ deploy:
     bundle_type: zip
     application: zoomEdgar-webservice
 
-    deployment_group: zeusweb-webservice-group
+    deployment_group: zoomEdgar-webservice-group
 
     region: ap-northeast-2
     wait-until-deployed: true    
