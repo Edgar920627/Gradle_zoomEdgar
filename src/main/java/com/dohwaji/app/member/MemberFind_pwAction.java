@@ -80,7 +80,8 @@ public class MemberFind_pwAction implements Action {
 
 		
 		// 사용자에게 보낼 메시지를 기입합니다.
-		String host = "http://localhost:8096/zoomEdgar/";
+//		String host = "http://localhost:8096/zoomEdgar/";
+		String host = "http://zoomstorage.shop//zoomEdgar/";
 		String from = "7dnjs711@gmail.com";
 		String to = user_email;
 		
@@ -91,6 +92,8 @@ public class MemberFind_pwAction implements Action {
 		String content = "다음 링크에 접속하여 이메일 확인을 진행하세요. " +
 				"<a href='" + host + "member/Find_PWEmailCheck.me?user_email=" + user_email +"&code=" + new SHA256().getSHA256(to) + "'>이메일 인증하기</a>";
 
+		
+		System.out.println("  [ 2  content  ]  = " + content);
 		
 		// SMTP에 접속하기 위한 정보를 기입합니다.
 		Properties p = new Properties();
@@ -108,6 +111,8 @@ public class MemberFind_pwAction implements Action {
 		System.out.println(" [ to ] = " + to);
 		
 		try{
+			System.out.println(" [ 4  진입  ] = ");
+			
 		    Authenticator auth = new Gmail();
 		    Session ses = Session.getInstance(p, auth);
 		    ses.setDebug(true);
@@ -121,7 +126,7 @@ public class MemberFind_pwAction implements Action {
 		    Transport.send(msg);
 		    
 		    
-		    
+		    System.out.println(" [ 5  msg) ] = " + msg);
 		    
 		    
 		} catch(Exception e){
