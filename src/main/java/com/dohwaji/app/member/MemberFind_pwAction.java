@@ -82,6 +82,7 @@ public class MemberFind_pwAction implements Action {
 		// 사용자에게 보낼 메시지를 기입합니다.
 //		String host = "http://localhost:8096/zoomEdgar/";
 		String host = "http://zoomstorage.shop//zoomEdgar/";
+		
 		String from = "7dnjs711@gmail.com";
 		String to = user_email;
 		
@@ -111,12 +112,19 @@ public class MemberFind_pwAction implements Action {
 		System.out.println(" [ to ] = " + to);
 		
 		try{
-			System.out.println(" [ 4  진입  ] = ");
+			System.out.println(" [ 4  진입  ] ");
 			
 		    Authenticator auth = new Gmail();
+		    System.out.println(" [ 5  auth  ]  = " + auth);
+		    
 		    Session ses = Session.getInstance(p, auth);
+		    System.out.println(" [ 6  ses  ]  = " + ses);
+		    
 		    ses.setDebug(true);
+		    System.out.println(" [ 7  ses.setDebug(true)  ]  ");
+		    
 		    MimeMessage msg = new MimeMessage(ses); 
+		    System.out.println(" [ 6  ses  ]  = " + ses);
 		    msg.setSubject(subject);
 		    Address fromAddr = new InternetAddress(from);
 		    msg.setFrom(fromAddr);
