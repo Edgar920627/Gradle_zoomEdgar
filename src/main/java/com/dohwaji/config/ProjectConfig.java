@@ -7,7 +7,7 @@ public class ProjectConfig {
 	 * 테스트시에는 자기 로컬 디렉토리가 있어야함
 	 */
 	public static String BBS_UPLOAD_LOCATION = "C:\\asd\\zoom\\WebContent\\app\\bbs\\bbs_images";
-	public static String PRODUCT_UPLOAD_LOCATION = "C:\\asd\\zoom\\WebContent\\app\\bbs\\bbs_images";
+	public static String PRODUCT_UPLOAD_LOCATION = "/home/ec2-user/app/uploads";
 	public static String USER_UPLOAD_LOCATION = "C:\\JSP_01\\test_dd\\WebContent\\blue\\imagesProduct";
 	public static String BTTIP_UPLOAD_LOCATION = "C:\\JSP_01\\test_dd\\WebContent\\blue\\imagesProduct";
 	//String saveFolder = request.getServletContext().getRealPath("");
