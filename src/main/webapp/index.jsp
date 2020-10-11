@@ -16,7 +16,7 @@
 <html>
 
 <head>
-      <title>${pageContext.request.contextPath}</title>
+      <title>zoom</title>
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
       <link rel="stylesheet" href="${pageContext.request.contextPath}/app/assets/css/main.css" />
