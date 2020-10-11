@@ -275,12 +275,12 @@
          <c:choose>
             <c:when test="${session_id != null}">
             <section style="text-align:center;">
-               <h2 style="font-weight: bold;">내 정보</h2>
+               <h2 style="font-weight: bold;">내 정보.</h2>
                
                
                <div align="center" ></div>
                <div>${session_name}(${session_id})</div>
-               <div>IP&nbsp;&nbsp;${session_ip}</div>
+           <%--     <div>IP&nbsp;&nbsp;${session_ip}</div> --%>
             <%--    <p class="m1">${memberBean.getUser_name()}</p> --%>
                
             <%--    <p style="font-weight: bold;"><%=session.getAttribute("session_id")%></p>  --%>
