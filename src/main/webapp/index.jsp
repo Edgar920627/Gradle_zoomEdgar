@@ -275,7 +275,7 @@
          <c:choose>
             <c:when test="${session_id != null}">
             <section style="text-align:center;">
-               <h2 style="font-weight: bold;">내 정보..</h2>
+               <h2 style="font-weight: bold;">내 정보</h2>
                
                
                <div align="center" ></div>
