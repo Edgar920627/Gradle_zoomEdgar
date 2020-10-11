@@ -78,9 +78,13 @@ public class EmailSendAction implements Action {
 		}
 
 		
+		System.out.println("  [  ----------------------  mail start  ---------------------  ]  = ");
+		
 		// 사용자에게 보낼 메시지를 기입합니다.
 //		String host = "http://localhost:8096/zoomEdgar/";
 		String host = "http://zoomstorage.shop//zoomEdgar/";
+		
+		System.out.println("  [ 1  host  ]  = " + host);
 
 		String from = "7dnjs711@gmail.com";
 		String to = m_dao.getUserEmail(user_id);
@@ -92,6 +96,7 @@ public class EmailSendAction implements Action {
 		String content = "다음 링크에 접속하여 이메일 확인을 진행하세요. " +
 		"<a href='" + host + "member/EmailCheck.me?user_id=" + user_id +"&code=" + new SHA256().getSHA256(to) + "'>이메일 인증하기</a>";
 
+		System.out.println("  [ 2  content  ]  = " + content);
 		
 		// SMTP에 접속하기 위한 정보를 기입합니다.
 		Properties p = new Properties();
@@ -106,9 +111,12 @@ public class EmailSendAction implements Action {
 		p.put("mail.smtp.socketFactory.fallback", "false");
 		 
 		
-		System.out.println(" [ to ] = " + to);
+		System.out.println(" [ 3  to  ] = " + to);
 		
 		try{
+			
+			System.out.println(" [ 4  진입  ] = ");
+			
 		    Authenticator auth = new Gmail();
 		    Session ses = Session.getInstance(p, auth);
 		    ses.setDebug(true);
@@ -122,6 +130,7 @@ public class EmailSendAction implements Action {
 		    Transport.send(msg);
 		    
 		    
+		    System.out.println(" [ 5  msg) ] = " + msg);
 		    
 		    
 		    
