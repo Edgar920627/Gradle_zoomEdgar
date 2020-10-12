@@ -108,22 +108,37 @@ public class MemberFind_idAction implements Action {
 		System.out.println(" [ to ] = " + to);
 		
 		try{
-			System.out.println(" [ 4  진입  ] = ");
+			System.out.println(" [ 4  진입  ] ");
 			
 		    Authenticator auth = new Gmail();
+		    System.out.println(" [  5   auth  ] = " + auth);
+		    
+		    
 		    Session ses = Session.getInstance(p, auth);
 		    ses.setDebug(true);
+		    System.out.println(" [  6   ses  ] = " + ses);
+		    
+		    
 		    MimeMessage msg = new MimeMessage(ses); 
 		    msg.setSubject(subject);
+		    System.out.println(" [  7   msg  ] = " + msg);
+		    
+		    
 		    Address fromAddr = new InternetAddress(from);
 		    msg.setFrom(fromAddr);
+		    System.out.println(" [  8   fromAddr  ] = " + fromAddr);
+		    
 		    Address toAddr = new InternetAddress(to);
+		    System.out.println(" [  9   toAddr  ] = " + toAddr);
+		    
+		    
 		    msg.addRecipient(Message.RecipientType.TO, toAddr);
 		    msg.setContent(content, "text/html;charset=UTF-8");
 		    Transport.send(msg);
 		    
 		    
-		    System.out.println(" [ 5  msg) ] = " + msg);
+		    System.out.println(" [ 10  end  ] ");
+	
 		    
 		    
 		    

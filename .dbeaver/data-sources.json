@@ -1,14 +1,13 @@
 {
 	"folders": {},
 	"connections": {
-		"mariaDB-175104ed02a-57153fcaa60f2d83": {
+		"mariaDB-1751bf348fa-20adcee8e54e2929": {
 			"provider": "mysql",
 			"driver": "mariaDB",
 			"name": "zoomedgar",
 			"save-password": true,
 			"show-system-objects": true,
 			"read-only": false,
-			"virtual-model-id": "mariaDB-1751049e443-7f5e83aa0c7ded79",
 			"configuration": {
 				"host": "zoomedgar.ce50sry5tc0l.ap-northeast-2.rds.amazonaws.com",
 				"port": "3306",
@@ -16,7 +15,21 @@
 				"url": "jdbc:mysql://zoomedgar.ce50sry5tc0l.ap-northeast-2.rds.amazonaws.com:3306/zoomedgar",
 				"home": "mysql_client",
 				"type": "dev",
-				"auth-model": "native"
+				"auth-model": "native",
+				"handlers": {
+					"ssh_tunnel": {
+						"type": "TUNNEL",
+						"enabled": true,
+						"save-password": true,
+						"properties": {
+							"port": 22,
+							"keyPath": "C:\\Edgar_IT\\key\\zoomit_key\\zoomedgar-keypair.ppk",
+							"implementation": "jsch",
+							"host": "52.78.8.179",
+							"authType": "PUBLIC_KEY"
+						}
+					}
+				}
 			}
 		}
 	},
