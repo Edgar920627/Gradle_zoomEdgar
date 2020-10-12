@@ -56,10 +56,10 @@ public class MemberLoginOkAction implements Action{
 		String ip = local.getHostAddress();
 		
 		// ip 확인
-		System.out.println("local ip : " + ip);
-		System.out.println("REMOTE_ADDR = " + REMOTE_ADDR);
-		System.out.println("inet = "+ inet);
-		System.out.println("svrIP = "+ svrIP);
+		System.out.println(" [  local ip ] : " + ip);
+		System.out.println(" [  REMOTE_ADDR = " + REMOTE_ADDR);
+		System.out.println(" [  inet = "+ inet);
+		System.out.println(" [  svrIP = "+ svrIP);
 		
 		String user_id = id;
 		String login_ip = svrIP;

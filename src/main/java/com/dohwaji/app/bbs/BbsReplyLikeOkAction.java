@@ -1,5 +1,6 @@
 package com.dohwaji.app.bbs;
 
+import java.net.InetAddress;
 import java.util.HashMap;
 
 
@@ -43,8 +44,13 @@ public class BbsReplyLikeOkAction implements Action {
 		String user_id = request.getParameter("user_id");
 		String login_ip = request.getParameter("login_ip");
 		
-
-	
+		System.out.println("  [  login_ip  ]    =" + login_ip);
+		// ip 가져오기  test_1
+		InetAddress inet = InetAddress.getLocalHost();
+		String svrIP = inet.getHostAddress();
+		login_ip = svrIP;
+		
+		System.out.println("  [  login_ip  ]    =" + login_ip);
 		
 		// no와 id값을 map에 저장
 		Map<String, Object> m = new HashMap<>();
