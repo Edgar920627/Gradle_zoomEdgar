@@ -14,9 +14,9 @@
       <!-- Logo -->
          <span class="logo">
 				 <a href="${pageContext.request.contextPath}/index.jsp">
-				<%--  <img src="${pageContext.request.contextPath}/app/images/logo.png" alt="" style="height:50px; margin-top:10px;"> --%>
-				 </a>
+			
 				<span style="font-family: 'Gaegu', cursive; font-size: 50px;">Z.O.O.M</span>
+				 </a>
 			</span>
     
        <!-- search -->   
