@@ -81,7 +81,7 @@ public class MemberFind_pwAction implements Action {
 		
 		// 사용자에게 보낼 메시지를 기입합니다.
 //		String host = "http://localhost:8096/zoomEdgar/";
-		String host = "http://zoomstorage.shop//zoomEdgar/";
+		String host = "http://zoomstorage.shop/zoomEdgar/";
 		
 		String from = "7dnjs711@gmail.com";
 		String to = user_email;
