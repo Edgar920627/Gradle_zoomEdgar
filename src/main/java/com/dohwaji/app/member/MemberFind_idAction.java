@@ -133,11 +133,14 @@ public class MemberFind_idAction implements Action {
 		    
 		    
 		    msg.addRecipient(Message.RecipientType.TO, toAddr);
+		    System.out.println("   [ 10  ]  ");
+		    
 		    msg.setContent(content, "text/html;charset=UTF-8");
+		    System.out.println("   [ 11  ]  ");
 		    Transport.send(msg);
 		    
 		    
-		    System.out.println(" [ 10  end  ] ");
+		    System.out.println(" [ 12  end  ] ");
 	
 		    
 		    
