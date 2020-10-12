@@ -102,37 +102,54 @@ public class EmailSendAction implements Action {
 		// SMTP에 접속하기 위한 정보를 기입합니다.
 		Properties p = new Properties();
 		p.put("mail.smtp.user", from);
-		p.put("mail.smtp.host", "smtp.googlemail.com");
-		p.put("mail.smtp.port", "465");
+		p.put("mail.smtp.host", "smtp.gmail.com");
+		p.put("mail.smtp.port", "587");
 		p.put("mail.smtp.starttls.enable", "true");
 		p.put("mail.smtp.auth", "true");
 		p.put("mail.smtp.debug", "true");
-		p.put("mail.smtp.socketFactory.port", "465");
-		p.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
-		p.put("mail.smtp.socketFactory.fallback", "false");
+//		p.put("mail.smtp.socketFactory.port", "587");
+//		p.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
+//		p.put("mail.smtp.socketFactory.fallback", "false");
 		 
 		
-		System.out.println(" [ 3  to  ] = " + to);
+		System.out.println(" [ to ] = " + to);
 		
 		try{
-			
-			System.out.println(" [ 4  진입  ] = ");
+			System.out.println(" [ 4  진입  ] ");
 			
 		    Authenticator auth = new Gmail();
+		    System.out.println(" [  5   auth  ] = " + auth);
+		    
+		    
 		    Session ses = Session.getInstance(p, auth);
 		    ses.setDebug(true);
+		    System.out.println(" [  6   ses  ] = " + ses);
+		    
+		    
 		    MimeMessage msg = new MimeMessage(ses); 
 		    msg.setSubject(subject);
+		    System.out.println(" [  7   msg  ] = " + msg);
+		    
+		    
 		    Address fromAddr = new InternetAddress(from);
 		    msg.setFrom(fromAddr);
+		    System.out.println(" [  8   fromAddr  ] = " + fromAddr);
+		    
 		    Address toAddr = new InternetAddress(to);
+		    System.out.println(" [  9   toAddr  ] = " + toAddr);
+		    
+		    
 		    msg.addRecipient(Message.RecipientType.TO, toAddr);
+		    System.out.println("   [ 10  ]  ");
+		    
 		    msg.setContent(content, "text/html;charset=UTF-8");
+		    System.out.println("   [ 11  ]  ");
 		    Transport.send(msg);
 		    
 		    
-		    System.out.println(" [ 5  msg) ] = " + msg);
-		    
+		    System.out.println(" [ 12  end  ] ");
+	
+		  
 		    
 		    
 		} catch(Exception e){
