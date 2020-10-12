@@ -101,8 +101,8 @@ public class MemberFind_idAction implements Action {
 		p.put("mail.smtp.auth", "true");
 		p.put("mail.smtp.debug", "true");
 //		p.put("mail.smtp.socketFactory.port", "587");
-		p.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
-		p.put("mail.smtp.socketFactory.fallback", "false");
+//		p.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
+//		p.put("mail.smtp.socketFactory.fallback", "false");
 		 
 		
 		System.out.println(" [ to ] = " + to);
