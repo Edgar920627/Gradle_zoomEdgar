@@ -58,11 +58,10 @@ public class MemberLoginOkAction implements Action{
 		String ip = local.getHostAddress();
 		
 
-				
+		// ip 가져오기 test _4 최종
 		IpAction ipAction = new IpAction();
-		String t_ip = ipAction.getClientIP(request);
+		String login_ip = ipAction.getClientIP(request);
 		
-		System.out.println("   [   t_ip   ]   = " + t_ip);
 		
 		
 	
@@ -73,9 +72,9 @@ public class MemberLoginOkAction implements Action{
 		System.out.println(" [  REMOTE_ADDR = " + REMOTE_ADDR);
 		System.out.println(" [  inet 		= " + inet);
 		System.out.println(" [  svrIP 		= " + svrIP);
+		System.out.println("   [   login_ip   ]   = " + login_ip);
 		
 		String user_id = id;
-		String login_ip = svrIP;
 		
 		l_bean.setUser_id(user_id);
 		l_bean.setLogin_ip(login_ip);
