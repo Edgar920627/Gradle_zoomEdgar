@@ -18,6 +18,7 @@ import com.dohwaji.app.bbs.dao.BbsReplyBean;
 import com.dohwaji.app.bbs.dao.BbsReplyDAO;
 import com.dohwaji.app.member.dao.MemberBean;
 import com.dohwaji.app.member.dao.MemberDAO;
+import com.dohwaji.app.util.IpAction;
 
 
 public class BbsListAction implements Action {
@@ -95,10 +96,13 @@ public class BbsListAction implements Action {
 		
 		
 		
-		// ip 가져오기  test_1
-		InetAddress inet = InetAddress.getLocalHost();
-		String svrIP = inet.getHostAddress();
-		String login_ip = svrIP;
+
+		// ip 가져오기 test _4 최종
+		IpAction ipAction = new IpAction();
+		String login_ip = ipAction.getClientIP(request);
+		
+		System.out.println("   [   login_ip   ]   = " + login_ip);
+		
 		session.setAttribute("session_ip", login_ip);
 		
 		if (bbs_maindiv.equals("전체") && bbs_smalldiv.equals("전체"))  {
