@@ -61,22 +61,23 @@ public class BbsReplyLikeOkAction implements Action {
 		
 		
 
-		System.out.println("1. BbsReplyLikeOkAction bbs_num =" + bbs_num);
-		System.out.println("2. BbsReplyLikeOkAction user_id =" + user_id);
-		System.out.println("3. BbsReplyLikeOkAction reply_num =" + reply_num);
-		System.out.println("4. BbsReplyLikeOkAction login_ip =" + login_ip);
+		System.out.println("  [  1. BbsReplyLikeOkAction bbs_num =" + bbs_num);
+		System.out.println("  [  2. BbsReplyLikeOkAction user_id =" + user_id);
+		System.out.println("  [  3. BbsReplyLikeOkAction reply_num =" + reply_num);
+		System.out.println("  [  4. BbsReplyLikeOkAction login_ip =" + login_ip);
 
 	
 		// 동일 게시글에 대한 이전 추천 여부 검색
 		int result = br_dao.like_check(m);
 
-		System.out.println("4. BbsReplyLikeOkAction result =" + result);
+		System.out.println("  [  5. BbsReplyLikeOkAction result =" + result);
 
 		if (result == 0) { // 추천하지 않았다면 추천 추가
-
+			System.out.println("  [  6. 추천 추가 진입");
 			br_dao.like_update(m);
 
 		} else { // 추천을 하였다면 추천 삭제
+			System.out.println("  [  7. 추천 삭제 진입");
 
 			br_dao.like_delete(m);
 		}
