@@ -18,6 +18,7 @@ import com.dohwaji.app.bbs.dao.BbsDAO;
 import com.dohwaji.app.bbs.dao.BbsFilesDAO;
 import com.dohwaji.app.bbs.dao.BbsReplyBean;
 import com.dohwaji.app.bbs.dao.BbsReplyDAO;
+import com.dohwaji.app.util.IpAction;
 
 
 public class BbsReplyLikeOkAction implements Action {
@@ -45,10 +46,10 @@ public class BbsReplyLikeOkAction implements Action {
 		String login_ip = request.getParameter("login_ip");
 		
 		System.out.println("  [  login_ip  ]    =" + login_ip);
-		// ip 가져오기  test_1
-		InetAddress inet = InetAddress.getLocalHost();
-		String svrIP = inet.getHostAddress();
-		login_ip = svrIP;
+
+		// ip 가져오기 test _4 최종
+		IpAction ipAction = new IpAction();
+		login_ip = ipAction.getClientIP(request);
 		
 		System.out.println("  [  login_ip  ]    =" + login_ip);
 		
