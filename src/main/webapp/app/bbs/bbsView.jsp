@@ -642,8 +642,7 @@ th, td {
 										href="${pageContext.request.contextPath}/bbs/BbsReplyLikeOk.bb
 										?bbs_num=${bbsReplyList.getBbs_num()}
 										&user_id=${session_id}
-										&reply_num=${bbsReplyList.getReply_num()}
-										&login_ip=${session_ip}">좋아요(${br_dao.like_count(bbsReplyList.getReply_num())})</a>
+										&reply_num=${bbsReplyList.getReply_num()}">좋아요(${br_dao.like_count(bbsReplyList.getReply_num())})</a>
 										</td>
 										
 

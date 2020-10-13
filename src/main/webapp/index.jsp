@@ -86,44 +86,24 @@
                   
                   <!-- Banner -->
 							<section id="banner">
-								<article data-position="bottom right">
-									<div class="inner">
-										<img src="images/slide01.jpg" alt="">
-										<h2>Ultricies sed magna</h2>
-										<p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor ipsum dolor.</p>
-										<ul class="actions">
-											<li><a class="button large" href="#">Magna sed dolor</a></li>
-										</ul>
-									</div>
-								</article>
-								<article data-position="top right">
-									<div class="inner">
-										<img src="images/slide02.jpg" alt="">
-										<h2>Sed mattis nunc lorem</h2>
-										<p>Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida fringilla.</p>
-										<ul class="actions">
-											<li><a class="button large" href="#">Magna sed dolor</a></li>
-										</ul>
-									</div>
-								</article>
-								<article data-position="right">
-									<div class="inner">
-										<img src="images/slide03.jpg" alt="">
-										<h2>Nisl sed vitae</h2>
-										<p>Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac magna consequat purus ipsum consequat.</p>
-										<ul class="actions">
-											<li><a class="button large" href="#">Magna sed dolor</a></li>
-										</ul>
+									<article data-position="center">
+									<div style="width: 850px; height: 456px; overflow: hidden; border: 10px solid #000000;">
+										<img src="${pageContext.request.contextPath}/app/banner/같이놀자.png" alt="" style="width: 850px; height: 456px;">
 									</div>
 								</article>
 								<article data-position="center">
-									<div class="inner">
-										<img src="images/slide04.jpg" alt="">
-										<h2>Porta ultricies consectetur</h2>
-										<p>Mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt lorem ipsum dolor sit amet. Magna tellus fusce tincidunt lorem.</p>
-										<ul class="actions">
-											<li><a class="button large" href="#">Magna sed dolor</a></li>
-										</ul>
+									<div style="width: 850px; height: 456px; overflow: hidden; border: 10px solid #000000;">
+										<img src="${pageContext.request.contextPath}/app/banner/상세페이지.jpg" alt="" style="width: 850px; height: 456px;">
+									</div>
+								</article>
+								<article data-position="center">
+									<div style="width: 850px; height: 456px; overflow: hidden; border: 10px solid #000000;">
+										<img src="${pageContext.request.contextPath}/app/banner/배너여왕.jpg" alt="" style="width: 850px; height: 456px;">
+									</div>
+								</article>
+								<article data-position="center">
+									<div style="width: 850px; height: 456px; overflow: hidden; border: 10px solid #000000;">
+										<img src="${pageContext.request.contextPath}/app/banner/쇼핑몰.jpg" alt="" style="width: 850px; height: 456px;">
 									</div>
 								</article>
 							</section>

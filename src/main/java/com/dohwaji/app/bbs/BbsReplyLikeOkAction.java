@@ -43,13 +43,12 @@ public class BbsReplyLikeOkAction implements Action {
 		int bbs_num = Integer.parseInt(request.getParameter("bbs_num"));
 		int reply_num = Integer.parseInt(request.getParameter("reply_num"));
 		String user_id = request.getParameter("user_id");
-		String login_ip = request.getParameter("login_ip");
 		
-		System.out.println("  [  login_ip  ]    =" + login_ip);
+
 
 		// ip 가져오기 test _4 최종
 		IpAction ipAction = new IpAction();
-		login_ip = ipAction.getClientIP(request);
+		String login_ip = ipAction.getClientIP(request);
 		
 		System.out.println("  [  login_ip  ]    =" + login_ip);
 		
