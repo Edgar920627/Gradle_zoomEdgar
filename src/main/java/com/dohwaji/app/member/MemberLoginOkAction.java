@@ -1,6 +1,7 @@
 package com.dohwaji.app.member;
 
 import java.io.PrintWriter;
+
 import java.net.InetAddress;
 import java.util.Map;
 
@@ -13,6 +14,7 @@ import com.dohwaji.action.ActionForward;
 import com.dohwaji.app.member.dao.LoginBean;
 import com.dohwaji.app.member.dao.MemberBean;
 import com.dohwaji.app.member.dao.MemberDAO;
+import com.dohwaji.app.util.IpAction;
 
 
 public class MemberLoginOkAction implements Action{
@@ -54,6 +56,17 @@ public class MemberLoginOkAction implements Action{
 		InetAddress local;
 		local = InetAddress.getLocalHost();
 		String ip = local.getHostAddress();
+		
+
+				
+		IpAction ipAction = new IpAction();
+		String t_ip = ipAction.getClientIP(request);
+		
+		System.out.println("   [   t_ip   ]   = " + t_ip);
+		
+		
+	
+		
 		
 		// ip 확인
 		System.out.println(" [  local ip 	= " + ip);
