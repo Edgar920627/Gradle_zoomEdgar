@@ -85,24 +85,24 @@
                   
                   
                   <!-- Banner -->
-							<section id="banner">
-									<article data-position="center">
-									<div style="width: 850px; height: 456px; overflow: hidden; border: 10px solid #000000;">
+							<section id="banner" style="width: 850px; height: 456px; overflow: hidden; border: 10px solid #FFFFFF;">
+									<article data-position="bottom right">
+									<div style="width: 850px; height: 456px;">
 										<img src="${pageContext.request.contextPath}/app/banner/같이놀자.png" alt="" style="width: 850px; height: 456px;">
 									</div>
 								</article>
-								<article data-position="center">
-									<div style="width: 850px; height: 456px; overflow: hidden; border: 10px solid #000000;">
+								<article data-position="top right">
+									<div style="width: 850px; height: 456px;">
 										<img src="${pageContext.request.contextPath}/app/banner/상세페이지.jpg" alt="" style="width: 850px; height: 456px;">
 									</div>
 								</article>
-								<article data-position="center">
-									<div style="width: 850px; height: 456px; overflow: hidden; border: 10px solid #000000;">
+								<article data-position="right">
+									<div style="width: 850px; height: 456px;">
 										<img src="${pageContext.request.contextPath}/app/banner/배너여왕.jpg" alt="" style="width: 850px; height: 456px;">
 									</div>
 								</article>
-								<article data-position="center">
-									<div style="width: 850px; height: 456px; overflow: hidden; border: 10px solid #000000;">
+								<article data-position="center" >
+									<div style="width: 850px; height: 456px;">
 										<img src="${pageContext.request.contextPath}/app/banner/쇼핑몰.jpg" alt="" style="width: 850px; height: 456px;">
 									</div>
 								</article>
